@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta property="og:title" content="Flight 370 Conspiracy Generator" />
+    <meta property="og:image" content="./conspiracy.jpg" />
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>What happened to MH 370?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +55,7 @@
       html,
       body {
         height: 100%;
-        background-color: #050;
+        background-color: #000;
       }
       body {
         color: #fff;
@@ -206,17 +208,35 @@
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '268976189946623',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
-          <h1 class="cover-heading" style="text-shadow: 2px 2px #333;">What happened to Flight 370?</h1><br>
+          <h1 class="cover-heading" style="text-shadow: 2px 2px #333;">What happened to Malaysian Flight 370?</h1><br>
           <div class="inner cover">
 
             <div id="form_actions" style="display:none;">
-                <h2>What the hell happened?</h2>
+                <h2>How was the plane sabotaged?</h2>
                 <h3><a href="#" onclick="$('#form_actions').hide();$('#form_funders').show();$('#input_actions').val('');">randomize for me</a></h3>
                 <p style="text-align:center;">&mdash; or enter your own &mdash;</p>
                 <div class="input-group" style="margin-left:30%;margin-right:30%;">
@@ -244,7 +264,7 @@
             </div>
 
             <div id="form_weapons" style="display:none;">
-                <h2>How is that even possible?</h2>
+                <h2>What weapon was used?</h2>
                 <h3><a href="#" onclick="$('#form_weapons').hide();$('#form_places').show();$('#input_weapons').val('');">randomize for me</a></h3>
                 <p style="text-align:center;">&mdash; or enter your own &mdash;</p>
                 <div class="input-group" style="margin-left:30%;margin-right:30%;">
@@ -259,31 +279,46 @@
 
             <div id="form_places" style="display:none;">
                 <h2>So where's the plane now?</h2>
-                <h3><a href="#" onclick="$('#form_places').hide();$('#form_bonus').show();$('#input_places').val('');">randomize for me</a></h3>
+                <h3><a href="#" onclick="$('#form_places').hide();$('#form_happens').show();$('#input_places').val('');">randomize for me</a></h3>
                 <p style="text-align:center;">&mdash; or enter your own &mdash;</p>
                 <div class="input-group" style="margin-left:30%;margin-right:30%;">
-                  <input type="text" class="form-control" id="input_places" placeholder="e.g. a gun">
+                  <input type="text" class="form-control" id="input_places" placeholder="e.g. Siberia">
                   <span class="input-group-btn">
-                    <button class="btn btn-primary" onclick="$('#form_places').hide();$('#form_bonus').show();"><span class="glyphicon glyphicon-arrow-right"></span></button></h3>
+                    <button class="btn btn-primary" onclick="$('#form_places').hide();$('#form_happens').show();"><span class="glyphicon glyphicon-arrow-right"></span></button></h3>
                   </span>
                 </div>
                 <br>
-                <p style="text-align:center;">All the way to the White House.</p>
+                <p style="text-align:center;">All the way to the top.</p>
             </div>
 
-                <div id="form_bonus" style="display:none;">
-                <h2>Bonus round: what REALLY happened to JonBenét Ramsey?</h2>
-                <h3><a href="#" onclick="$('#form_bonus').hide();$('#form_finish').show();$('#input_bonus').val('');">randomize for me</a></h3>
+            <div id="form_happens" style="display:none;">
+                <h2>What REALLY happened to the Lindbergh baby?</h2>
+                <h3><a href="#" onclick="$('#form_happens').hide();$('#form_conspiracies').show();$('#input_happens').val('');">randomize for me</a></h3>
                 <p style="text-align:center;">&mdash; or enter your own &mdash;</p>
                 <div class="input-group" style="margin-left:30%;margin-right:30%;">
-                  <input type="text" class="form-control" id="input_bonus" placeholder="e.g. kidnapped by pope benedict">
+                  <input type="text" class="form-control" id="input_happens" placeholder="e.g. taken by Albanians">
                   <span class="input-group-btn">
-                    <button class="btn btn-primary" onclick="$('#form_bonus').hide();$('#form_finish').show();"><span class="glyphicon glyphicon-arrow-right"></span></button></h3>
+                    <button class="btn btn-primary" onclick="$('#form_happens').hide();$('#form_conspiracies').show();"><span class="glyphicon glyphicon-arrow-right"></span></button></h3>
                   </span>
                 </div>
                 <br>
                 <p style="text-align:center;">This can't be a coincidence...</p>
             </div>
+
+            <div id="form_conspiracies" style="display:none;">
+                <h2>Bonus round: what's your favorite conspiracy?</h2>
+                <h3><a href="#" onclick="$('#form_conspiracies').hide();$('#form_finish').show();$('#input_conspiracies').val('');">randomize for me</a></h3>
+                <p style="text-align:center;">&mdash; or enter your own &mdash;</p>
+                <div class="input-group" style="margin-left:30%;margin-right:30%;">
+                  <input type="text" class="form-control" id="input_conspiracies" placeholder="e.g. 9/11">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" onclick="$('#form_conspiracies').hide();$('#form_finish').show();"><span class="glyphicon glyphicon-arrow-right"></span></button></h3>
+                  </span>
+                </div>
+                <br>
+                <p style="text-align:center;">There are no coincidences.</p>
+            </div>
+
             <div id="form_finish" style="display:none;">
                 <h2>Get ready for the big reveal</h2>
                 <br>
@@ -291,10 +326,12 @@
                     Generate Conspiracy
                 </button>
                 <br><br>
-                <p style="text-align:center;">There are no coincidences.</p>
+                <p style="text-align:center;">You won't believe this one crazy fact.</p>
             </div>
             <div id="conspiracy_result" style="display:none;">
             </div>
+            <div id="social">
+            <div>
           </div>
 
 
@@ -316,46 +353,63 @@
 
         data = {};
         data.actions = [
-              'a terrorist hijacking'
-            , 'a disgruntled employee hijacking'
-            , 'a hijacking by the ghost of Kim Jong Il'
-            , 'being diverted'
+              'terrorists hijacked the plane'
+            , 'a disgruntled employee hijacked the plane'
+            , 'the ghost of Kim Jong Il hijacked the plane'
+            , 'the plane was diverted'
             , 'the pilot killed himself'
-            , 'Passenger Uprising'
+            , 'passenger uprising'
         ]
         data.funders = [
-              'The Han Chinese'
+              'the Han Chinese'
             , 'Monsanto'
-            , 'The Illuminati'
+            , 'the Illuminati'
             , 'Obamacare'
-            , 'The Jews'
-            , 'Brown People'
+            , 'the Jews'
+            , 'brown people'
             , 'the Putin Regime'
             , 'Joseph Kony'
             , 'our own government'
         ]
         data.weapons = [
               'a box cutter'
-            , 'a 3d-printed gun'
+            , 'a 3D-printed gun'
             , 'a rudimentary lathe'
             , 'underwear explosives'
             , 'drunken boxing'
-            , 'a wooden clog containing c-4'
+            , 'a pair of Crocs made out of c-4'
         ]
         data.places = [
               'McMurdo Station, Antarctica'
             , 'Sierra Leone'
-            , 'South Azerbaijan'
+            , 'Southern Azerbaijan'
             , 'Xinjiang, China'
-            , 'turbulent West Syria'
+            , 'turbulent Western Syria'
             , 'the freezing cold wasteland of Saskatchewan'
             , 'an abandoned air base outside of Pyongyang'
         ]
-
-        var answer = 'taken by Albanians';
+        data.happens = [
+              'taken by Albanians'
+            , 'murdered and dumped in a shallow grave'
+            , 'given new identities and put in witness protection'
+            , 'held hostage for later demands'
+            , 'implanted with chips to be used as al Qaeda sleeper agents at a time TBD'
+            , 'turned into Russian agents'
+        ]
+        data.conspiracies = [
+              '9/11'
+            , 'the Newton massacre'
+            , 'Benghazi'
+            , 'the Naval Yard Shootings'
+            , 'the Boston Bombing'
+            , 'the Oklahoma City Bombing'
+            , 'Agenda 21'
+            , 'Obama\'s birth certificate'
+            , 'the lockerbie bombing'
+        ]
         var choices = {};
 
-        function make(content,answer) {
+        function make(content) {
             var str = "After " 
                 + ( $('#input_actions').val() !== '' ? $('#input_actions').val() : sample(content.actions) )
                 + " with "
@@ -365,20 +419,20 @@
                 + ", they managed to land in "
                 + ( $('#input_places').val() !== '' ? $('#input_places').val() : sample(content.places) )
                 + " where the passengers were "
-                + answer;
+                + ( $('#input_happens').val() !== '' ? $('#input_happens').val() : sample(content.happens) )
+                + ". This was all done to silence five people aboard who knew the truth about "
+                + ( $('#input_conspiracies').val() !== '' ? $('#input_conspiracies').val() : sample(content.conspiracies) )
+                + '.';
             return str;
         }
         function finish() {
-            var str = make(data,answer);
-            window.location.href = 'file://localhost/Users/jack/Dropbox/Projects/conspiracy/template.html?theory=' + str;
+            var str = encodeURIComponent(make(data));
+            window.location.href = 'http://www.370conspiracygenerator.com?theory=' + str;
         }
 
         function click() {
             console.log(make(data,answer));
         }
-        $( "#conspiracybutton" ).click(function() {
-            click();
-        });
 
         function getQueryVariable(variable) {
            var query = window.location.search.substring(1);
@@ -394,28 +448,16 @@
 
         function setup() {
             if (getQueryVariable('theory')) {
-                $('#conspiracy_result').append('<h2>' + decodeURIComponent(getQueryVariable('theory')) + '</h2>');
+                var str = decodeURIComponent(getQueryVariable('theory')).replace(/\+/g,' ');
+                $('#conspiracy_result').append('<h2>' + str + '</h2>');
                 $('#conspiracy_result').show();
+                console.log($(location).attr('href'));
+                $('#social').append('<br><h4><a onclick="return !window.open(this.href, \'Facebook\', \'width=640,height=300\')" href="https://www.facebook.com/sharer/sharer.php?u='+ $(location).attr('href') +'" target="_blank">Share on Facebook</a><br><a href="http://www.370conspiracygenerator.com">Generate another conspiracy</a></h4>');
+                $('head').append('<meta property="og:description" content="'+str+'" />');
             } else {
                 $('#form_actions').show();
+                $('head').append('<meta property="og:description" content="How far up does it go? All the way to the top." />');
             }
-        };
-
-        function oldsetup() {
-            for (var prop in data) {
-                if (data.hasOwnProperty) {
-                    console.log(prop);
-                    var collection = data[prop];
-                    for (var i = 0; i < collection.length; i++) {
-                        $('#form_'+prop).append(
-                            '<div class="value" id="' + prop + '_' + i + '" onclick="testfunc(\'' + prop + '\',' + i + ')">' + collection[i] + '</div>'
-                        );
-                    };
-                    $('#form_'+prop).append(
-                        '<input type="text" placeholder="custom value"></input>'
-                    );
-                };
-            };
         };
 
 
