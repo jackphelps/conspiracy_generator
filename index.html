@@ -451,7 +451,7 @@
                 $('#conspiracy_result').append('<h2>' + str + '</h2>');
                 $('#conspiracy_result').show();
                 console.log($(location).attr('href'));
-                $('#social').append('<br><h4><a onclick="return !window.open(this.href, \'Facebook\', \'width=640,height=300\')" href="https://www.facebook.com/sharer/sharer.php?u='+ $(location).attr('href') +'" target="_blank">Share on Facebook</a><br><a href="+ window.location.pathname +">Generate another conspiracy</a></h4>');
+                $('#social').append('<br><h4><a onclick="return !window.open(this.href, \'Facebook\', \'width=640,height=300\')" href="https://www.facebook.com/sharer/sharer.php?u='+ $(location).attr('href') +'" target="_blank">Share on Facebook</a><br><a href="'+ window.location.pathname +'">Generate another conspiracy</a></h4>');
                 $('head').append('<meta property="og:description" content="'+str+'" />');
             } else {
                 $('#form_actions').show();
